@@ -1,0 +1,29 @@
+/* #components-layout-demo-fixed .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.2);
+  } */
+  .site-layout .site-layout-background {
+    background: #fff;
+  }
+  .head {
+      height: 10vh;
+      /* background-color: black; */
+     
+  }
+  .timeline{
+    display: inline-block;
+    text-align:center;
+    width:40vw;
+    cursor: pointer;
+  }
+  .timeline:hover{
+    display: inline-block;
+    text-align:center;
+    width:40vw;
+    cursor: pointer;
+    color: brown;
+  }
+ 
