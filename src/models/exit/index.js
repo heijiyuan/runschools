@@ -1,11 +1,16 @@
-const speak = {
+const exit = {
     state: {
-        count:1
+        select:['1'],
+        //用于不同的页面默认选择项目
+
     }, // initial state
     reducers: {
       // handle state changes with pure functions
-      increment(state, payload) {
-        return state + payload
+      setSelected(state, payload) {
+        return {
+            ...state,
+            select:payload
+        }
       }
     },
     effects: {
@@ -17,4 +22,4 @@ const speak = {
       }
     }
   };
-  export default speak ;
+  export default exit;

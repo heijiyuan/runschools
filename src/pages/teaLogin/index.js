@@ -2,9 +2,9 @@ import  {  useEffect } from "react";
 import { connect } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Input, Button, Checkbox, message, Row, Col, Image } from "antd";
-import "./index.css";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import 'antd/dist/antd.css';
+import "./index.css"
 
 //备注
 const layout = {
@@ -14,7 +14,7 @@ const tailLayout = {
   wrapperCol: { offset: 6, span: 12 },
 };
 
-const Login = (props) => {
+const Tealogin = (props) => {
   const history = useHistory();
   const { loginDispatch,mode } = props;
 
@@ -40,10 +40,10 @@ const Login = (props) => {
       <>
         <Row>
           <Col span={5} offset={7}>
-            <Link style={{color:"#1890FF"}} to="/">{ mode == "ch" ?"学生登录":"นักเรียนเข้าสู่ระบบ"} </Link>
+            <Link  to="/">{ mode == "ch" ?"学生登录":"นักเรียนเข้าสู่ระบบ"} </Link>
           </Col>
           <Col span={5}>
-            <Link to="/Tealogin">{ mode == "ch" ?"管理员登录":"ผู้ดูแลระบบเข้าสู่ระบบ"}</Link>
+            <Link style={{color:"#1890FF"}} to="/Tealogin">{ mode == "ch" ?"管理员登录":"ผู้ดูแลระบบเข้าสู่ระบบ"}</Link>
           </Col>
         </Row>
       </>
@@ -86,8 +86,8 @@ const Login = (props) => {
               message: "请输入学号",
             },
             {
-              len: 10,
-              message: "长度10位!",
+              len: 7,
+              message: "长度7位!",
             },
           ]:[
             {
@@ -181,5 +181,5 @@ const mapDispatch = (dispatch) => ({
  
 });
 
-const LoginContainer = connect(mapState, mapDispatch)(Login);
-export default LoginContainer;
+const TeaLogin = connect(mapState, mapDispatch)(Tealogin);
+export default TeaLogin;

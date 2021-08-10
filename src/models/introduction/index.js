@@ -1,16 +1,11 @@
-const common = {
+const introduction = {
     state: {
-        select:['1'],
-        //用于不同的页面默认选择项目
-
+        count:1
     }, // initial state
     reducers: {
       // handle state changes with pure functions
-      setSelected(state, payload) {
-        return {
-            ...state,
-            select:payload
-        }
+      increment(state, payload) {
+        return state + payload
       }
     },
     effects: {
@@ -22,4 +17,4 @@ const common = {
       }
     }
   };
-  export default common;
+  export default introduction ;

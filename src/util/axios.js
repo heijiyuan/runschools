@@ -5,7 +5,7 @@ import { getStorage } from './index'
 
 // })
 axios.defaults.timeout = 30000;
-axios.defaults.baseURL = "http://116.62.13.6:8085/";
+axios.defaults.baseURL = "http://139.186.167.17:9999/";
 
 
 // http request 拦截器

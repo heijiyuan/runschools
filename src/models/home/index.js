@@ -1,11 +1,16 @@
 const home = {
     state: {
-        count:1
+        count:1,
+        defaultSelectedKeys:['1'],
+        
     }, // initial state
     reducers: {
       // handle state changes with pure functions
-      increment(state, payload) {
-        return state + payload
+      changeSelectedKeys(state, payload) {
+        return {
+          ...state,
+          defaultSelectedKeys:payload
+        }
       }
     },
     effects: {

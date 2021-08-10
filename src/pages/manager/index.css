@@ -26,4 +26,9 @@
     cursor: pointer;
     color: brown;
   }
- 
+  .show {
+    visibility: visible;
+}
+.hidden {
+    visibility: hidden;
+}

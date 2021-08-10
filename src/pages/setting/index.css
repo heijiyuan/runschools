@@ -1,0 +1,57 @@
+
+.Contain{
+
+    width: 100%;
+    margin-top: -20px;
+    
+    
+}
+.footbtn1{
+    position: relative;
+    left: 100px;
+}
+.footfont1{
+    margin-left: 100px;
+    position: relative;
+    font-size: x-large;
+}
+.foot{
+      
+    margin-bottom: 30px;
+    
+}
+.p{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid #DCDCDC;
+}
+.contain_1{
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+   
+   
+}
+.icon1{
+    font-size: 4rem;
+    height: 4rem;
+    width: 4rem;
+    margin-left: 26rem;
+    margin-top: 2rem;
+}
+.container_1_1{
+    height: 25rem;
+    width: 40rem;
+    margin-left: 13rem;
+    
+}
+.container_1_2{
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: 23.8rem;
+    display: flex;
+    align-items: center;
+   
+}

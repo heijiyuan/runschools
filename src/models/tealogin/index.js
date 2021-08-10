@@ -5,14 +5,13 @@ import {
 } from "antd"
  const login = {
   state:{
-    mode:'ch',
     token:'111',
     flag:'',
     code:0,
     personInfo:{
       name:'张三',
       studentId:'2019213000',
-      role:'老师'
+      role:'管理员'
     }
   }, // initial state
   reducers: {
@@ -34,12 +33,6 @@ import {
         personInfo:payload
       }
     },
-    changemode(state, payload){
-      return{
-        ...state,
-        mode:payload,
-      }
-    }
     // loginTrue(state,payload){
     //   return{
     //     flag:payload
@@ -50,29 +43,16 @@ import {
     // handle state changes with impure functions.
     async submitLogin(payload, rootState) {
       const res =  await post('api/login', payload)
-      console.log(this)
+      console.log(res)
       if(res.code === 200) {
         this.savecode(res.code)
         setStorage('token', res.data.token)
-        console.log(res.data)
         this.saveinfo(res.data)
       }
       else {
-         message.error(res.message);
+        message.error(res.loginMsg);
       }
-    },
-    async changeinfo(payload, rootState) {
-      const res =  await post('api/pinfor', )
-      console.log(res)
-      if(res.code === 200) {
-        console.log(res.data)
-        this.saveinfo(res.data)
-      }
-      else {
-        message.error(res.message);
-      }
-    },
-    
+    }
   }
 }
 export default login;

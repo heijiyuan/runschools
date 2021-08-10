@@ -1,4 +1,8 @@
-const about = {
+import { get, post } from "../../util/axios";
+import {
+  message
+} from "antd"
+const information = {
     state: {
         count:1,
         aboutme:'我的bilibili在2020年疫情期间，我上传了我的第一个bilibili视屏，是分享一个使用vue. js来编写实时疫情界面的教程，第一次收获了点赞和关注随后我在bilibili每周更新自己想要分享的东西，如果你感兴趣可以来我的个人空间瞧一瞧',
@@ -20,10 +24,16 @@ const about = {
     effects: {
       // handle state changes with impure functions.
       // use async/await for async actions
-      async incrementAsync(payload, rootState) {
-        await new Promise(resolve => setTimeout(resolve, 1000))
-        this.increment(payload)
-      }
+      async submitinfo(payload, rootState) {
+        const res =  await post('api/getinfor', payload)
+        console.log(res)
+        if(res.code === 200) {
+          message.success(res.message);
+        }
+        // else {
+        //   message.error(res.message);
+        // }
+      },
     }
   };
-  export default about ;
+  export default information ;
