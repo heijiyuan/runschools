@@ -7,17 +7,17 @@ import store from './models/index'
 
 import loadable from '@loadable/component'
 
-const Login = loadable(() => import('./pages/Login/index'))
+const Login = loadable(() => import('./pages/Login'))
 const Tealogin = loadable(() => import('./pages/teaLogin'))
 const Home  = loadable(() => import('./pages/home'))
-
+const Start  = loadable(() => import('./pages/start'))
 function App() {
   return (
    <Provider store={store}>
      <Router>
        <Switch>
-         {/* {renderRender(mainRouters)} */}
-            <Route path="/" exact component={Login}/>
+            <Route path="/" exact component={Start}/>
+            <Route path="/Login"  component={Login}/>
             <Route path="/Tealogin"  component={Tealogin}/>
             <Route path="/home"   component={Home}/>
        </Switch>

@@ -40,7 +40,7 @@ const Login = (props) => {
       <>
         <Row>
           <Col span={5} offset={7}>
-            <Link style={{color:"#1890FF"}} to="/">{ mode == "ch" ?"学生登录":"นักเรียนเข้าสู่ระบบ"} </Link>
+            <Link style={{color:"#1890FF"}} to="/Login">{ mode == "ch" ?"学生登录":"นักเรียนเข้าสู่ระบบ"} </Link>
           </Col>
           <Col span={5}>
             <Link to="/Tealogin">{ mode == "ch" ?"管理员登录":"ผู้ดูแลระบบเข้าสู่ระบบ"}</Link>
