@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
 import {  Provider  } from 'react-redux';
-import { Switch, HashRouter as Router, Route } from 'react-router-dom'
+import { Switch, HashRouter as Router, Route ,Redirect} from 'react-router-dom'
 import store from './models/index'
 
 import loadable from '@loadable/component'
@@ -16,10 +16,11 @@ function App() {
    <Provider store={store}>
      <Router>
        <Switch>
-            <Route path="/" exact component={Start}/>
+            {/* <Route path="/" exact component={Start}/> */}
             <Route path="/Login"  component={Login}/>
             <Route path="/Tealogin"  component={Tealogin}/>
             <Route path="/home"   component={Home}/>
+            <Redirect to="/Login"/>
        </Switch>
      </Router>
    </Provider>

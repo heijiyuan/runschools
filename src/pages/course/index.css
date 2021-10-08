@@ -1,0 +1,10 @@
+
+.listContainer{
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #CCCC;
+}
+.rootContainer{
+  margin-left: 100px;
+  margin-right: 100px;
+}

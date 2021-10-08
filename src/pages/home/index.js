@@ -15,6 +15,8 @@ import Manager from "../manager/index";
 import Exit from "../exit/index";
 import Information from "../information/index";
 import Introduction from "../introduction/index";
+import Course from "../course/index";
+import Start from "../start/index";
 const { Header, Content ,Sider,Footer} = Layout;
 
 const Home = (props) => {
@@ -117,7 +119,8 @@ const Home = (props) => {
                      <Menu.Item icon={<SettingOutlined />}   key="/home/setting">{ mode === "ch" ? "个人设置" : "การตั้งค่าส่วนบุคคล" }</Menu.Item>
                      <Menu.Item key="/home/introduction">&nbsp;&nbsp;&nbsp;&nbsp;{ mode === "ch" ? "重庆印象" : "ความประทับใจของฉงชิ่ง" }</Menu.Item>
                      <Menu.Item key="/home/exit">&nbsp;&nbsp;&nbsp;&nbsp;{ mode === "ch" ? "退出登录" : "ออกจากระบบ" }</Menu.Item>
-                  
+                     <Menu.Item key="/home/start">&nbsp;&nbsp;&nbsp;&nbsp;{ mode === "ch" ? "数据驾驶舱" : "การจัดการข้อมูล" }</Menu.Item>
+                     <Menu.Item key="/home/course">&nbsp;&nbsp;&nbsp;&nbsp;{ mode === "ch" ? "课程介绍" : "หลักสูตร" }</Menu.Item>
                  </Menu>
                 </Sider>
                 <Layout  style={{ marginLeft: 200 }}>
@@ -129,6 +132,8 @@ const Home = (props) => {
                    <Route path="/home/setting" component={Setting} />
                    <Route path="/home/introduction" component={Introduction} />
                    <Route path="/home/exit" component={Exit} />
+                   <Route path="/home/start" component={Start} />
+                   <Route path="/home/course" component={Course} />
                    <Redirect to="/home/information"/>
                  </Switch>
                  
